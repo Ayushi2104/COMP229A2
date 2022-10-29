@@ -1,0 +1,432 @@
+<%- include('partials/header'); -%>
+<%- include('partials/main_nav'); -%>
+  
+<!--<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<p>Contact us using the following details: <br><b>Phone Number:222-3456-7865. <br>Email:ddf@yahoo.com.</b></p>-->
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/stylesheets/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+      *,
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      html,
+      body {
+        height: 100%;
+        background-color: #88acb6;
+      }
+      .form-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+      }
+      .form-holder .form-content {
+        position: relative;
+        text-align: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: 60px;
+      }
+      .form-content .form-items {
+        border: 3px solid #fff;
+        padding: 40px;
+        display: inline-block;
+        width: 100%;
+        min-width: 540px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        text-align: left;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+      }
+      .form-content h3 {
+        color: #fff;
+        text-align: left;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      .form-content h3.form-title {
+        margin-bottom: 30px;
+      }
+      .form-content p {
+        color: #fff;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 20px;
+        margin-bottom: 30px;
+      }
+      .form-content label,
+      .was-validated .form-check-input:invalid ~ .form-check-label,
+      .was-validated .form-check-input:valid ~ .form-check-label {
+        color: #fff;
+      }
+      .form-content input[type="text"],
+      .form-content input[type="password"],
+      .form-content input[type="email"],
+      .form-content select {
+        width: 100%;
+        padding: 9px 20px;
+        text-align: left;
+        border: 0;
+        outline: 0;
+        border-radius: 6px;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+        color: #8d8d8d;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        margin-top: 16px;
+      }
+      .btn-primary {
+        background-color: #6c757d;
+        outline: none;
+        border: 0px;
+        box-shadow: none;
+      }
+      .btn-primary:hover,
+      .btn-primary:focus,
+      .btn-primary:active {
+        background-color: #495056;
+        outline: none !important;
+        border: none !important;
+        box-shadow: none;
+      }
+      .form-content textarea {
+        position: static !important;
+        width: 100%;
+        padding: 8px 20px;
+        border-radius: 6px;
+        text-align: left;
+        background-color: #fff;
+        border: 0;
+        font-size: 15px;
+        font-weight: 300;
+        color: #8d8d8d;
+        outline: none;
+        resize: none;
+        height: 120px;
+        -webkit-transition: none;
+        transition: none;
+        margin-bottom: 14px;
+      }
+      .form-content textarea:hover,
+      .form-content textarea:focus {
+        border: 0;
+        background-color: #ebeff8;
+        color: #8d8d8d;
+      }
+      .mv-up {
+        margin-top: -9px !important;
+        margin-bottom: 8px !important;
+      }
+      .invalid-feedback {
+        color: #ff606e;
+      }
+      .valid-feedback {
+        color: #2acc80;
+      }
+      .social_media {
+        z-index: 200;
+        color: white;
+        background-color: rgb(56, 81, 81);
+        font-size: 1.2rem;
+        /* overflow: hidden; */
+        position: sticky;
+        padding: 1px;
+        /* display: inline-block; */
+        width: 100%;
+      }
+      /* .social_media > p {
+        margin-left: 0;
+        display: inline;
+        margin-top: auto;
+        animation-name: example;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+      } */
+      /*.marquee {
+        /* white-space: nowrap; 
+        -webkit-animation: rightThenLeft 4s linear;
+         display: inline-block; 
+      }*/
+      @keyframes example {
+        0% {
+          margin-left: 0%;
+        }
+        25% {
+          margin-left: 25%;
+        }
+        50% {
+          margin-left: 50%;
+        }
+        75% {
+          margin-left: 75%;
+        }
+        100% {
+          margin-left: 100%;
+        }
+      }
+    </style>
+ 
+
+    <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <h2 class="logo">AP</h2>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../views/home.ejs"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../views/aboutme.ejs">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../views/services.ejs">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../views/projects.ejs">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../views/contactme.ejs">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>-->
+    <div class="social_media">
+      <marquee behavior="alternate"
+        ><span class="marquee">patel.2004aayushi@gmail.com </span></marquee
+      >
+    </div>
+    <div class="form-body">
+      <div class="row">
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items">
+              <h3>Contact Me</h3>
+              <p>Fill in the data below.</p>
+              <form class="requires-validation" novalidate action="/">
+                <div class="col-md-12">
+                  <input
+                    id="username"
+                    class="form-control"
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    required
+                  />
+                  <div class="valid-feedback">Username field is valid!</div>
+                  <div class="invalid-feedback">
+                    Username field cannot be blank!
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <input
+                    id="user_email"
+                    class="form-control"
+                    type="email"
+                    name="email"
+                    placeholder="E-mail Address"
+                    required
+                  />
+                  <div class="valid-feedback">Email field is valid!</div>
+                  <div class="invalid-feedback">
+                    Email field cannot be blank!
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <select class="form-select mt-3" id="user_purpose" required>
+                    <option selected disabled value="">Purpose</option>
+                    <option value="jweb">General Enquiry</option>
+                    <option value="sweb">Want to be my Client</option>
+                    <option value="pmanager">Complains</option>
+                  </select>
+                  <div class="valid-feedback">You selected a position!</div>
+                  <div class="invalid-feedback">Please select a position!</div>
+                </div>
+
+                <div class="col-md-12">
+                  <input
+                    id="user_query"
+                    class="form-control"
+                    type="text"
+                    name="password"
+                    placeholder="Query"
+                    required
+                  />
+                  <div class="valid-feedback">Query field is valid!</div>
+                  <div class="invalid-feedback">
+                    Query field cannot be blank!
+                  </div>
+                </div>
+
+                <div class="col-md-12 mt-3">
+                  <label class="mb-3 mr-1" for="gender">Gender: </label>
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="gender"
+                    id="male"
+                    autocomplete="off"
+                    required
+                  />
+                  <label class="btn btn-sm btn-outline-secondary" for="male"
+                    >Male</label
+                  >
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="gender"
+                    id="female"
+                    autocomplete="off"
+                    required
+                  />
+                  <label class="btn btn-sm btn-outline-secondary" for="female"
+                    >Female</label
+                  >
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="gender"
+                    id="secret"
+                    autocomplete="off"
+                    required
+                  />
+                  <label class="btn btn-sm btn-outline-secondary" for="secret"
+                    >Secret</label
+                  >
+                  <div class="valid-feedback mv-up">You selected a gender!</div>
+                  <div class="invalid-feedback mv-up">
+                    Please select a gender!
+                  </div>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="invalidCheck"
+                    required
+                  />
+                  <label class="form-check-label"
+                    >I confirm that all data are correct</label
+                  >
+                  <div class="invalid-feedback">
+                    Please confirm that the entered data are all correct!
+                  </div>
+                </div>
+
+                <div class="form-button mt-3">
+                  <button
+                    onclick="{submit()}"
+                    id="submit"
+                    type="submit"
+                    class="btn btn-primary"
+                  >
+                    Send
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        "use strict";
+        const forms = document.querySelectorAll(".requires-validation");
+        Array.from(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/general.js"></script>
+  </body>
+</html>
+
+   <%-include ('partials/bottom_nav.ejs');%>
+<%-include ('partials/footer.ejs');%>   
+
+
+

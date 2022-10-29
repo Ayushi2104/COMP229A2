@@ -1,0 +1,201 @@
+<%-include ('partials/header.ejs');%>
+<%-include ('partials/main_nav.ejs');%>
+<!-- 
+  Name: Ayushi Patel
+  Student ID: 301239473
+  Date: 15 Oct
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!--<link rel="stylesheet" href="/public/stylesheets/style.css" />-->
+    <style>
+      .title {
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Pacifico', cursive;
+  
+   
+  
+  }
+  fieldset {
+    color: rgb(0, 0, 0);
+    width: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+  }
+  legend {
+    color: rgb(0, 0, 0);
+  }
+  #home_tagline{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+  }
+  .home_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+  }
+  .navbar {
+    height: 70px;
+    font-size: 1.2rem;
+  }
+  
+  /* HOME END */
+  @import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+        .logo {
+          font-family: "Silkscreen", cursive;
+          color: white;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+      /* For Text Animation */
+      .title-word {
+        animation: color-animation 4s linear infinite;
+      }
+
+      .title-word-1 {
+        --color-1: #000000;
+        --color-2: #feb2f7;
+        --color-3: #e64dee;
+      }
+
+      .title-word-2 {
+        --color-1: #e64dee;
+        --color-2: #000000;
+        --color-3: #feb2f7;
+      }
+
+      .title-word-3 {
+        --color-1: #feb2f7;
+        --color-2: #e64dee;
+        --color-3: #000000;
+      }
+
+      @keyframes color-animation {
+        0% {
+          color: var(--color-1);
+        }
+        32% {
+          color: var(--color-1);
+        }
+        33% {
+          color: var(--color-2);
+        }
+        65% {
+          color: var(--color-2);
+        }
+        66% {
+          color: var(--color-3);
+        }
+        99% {
+          color: var(--color-3);
+        }
+        100% {
+          color: var(--color-1);
+        }
+      }
+    </style>
+  
+    <!-- Bootstrap Navbar -->
+    <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <h2 class="logo">AP</h2>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+        <!--<ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../views/home.ejs"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../views/aboutme.ejs">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../views/services.ejs">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../views/projects.ejs">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../views/contactme.ejs">Contact</a>
+          </li>
+        </ul>-->
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input
+            disabled
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button
+            disabled
+            class="btn btn-outline-light my-2 my-sm-0"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>-->
+    <div class="home_main">
+      <h1 class="title">
+        <span class="title-word title-word-1">Hello,</span>
+        <span class="title-word title-word-2">I'm</span>
+        <span class="title-word title-word-3">Ayushi</span>
+      </h1>
+
+      <br />
+      <fieldset>
+        <legend>Mission Statement</legend>
+        <p>
+          I am a student at centennial college.My aim is to get to 
+          the top of engineering world. I am and always will be 
+          a student. I will keep the beginners mind by  playing and 
+          experimenting without the fear of failure. 
+        </p>
+      </fieldset>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/general.js"></script>
+  </body>
+</html>
+<%- include('partials/bottom_nav'); -%>
+<%- include('partials/footer'); -%>

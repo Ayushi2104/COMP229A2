@@ -1,0 +1,61 @@
+  /* Name: Ayushi Patel
+  Student ID: 301239473
+  Date: 15 Oct 2022 */
+
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #e5e5e5;
+    background-color: #f6f6f6;
+  }
+  
+  /* HOME  */
+  .title {
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Pacifico', cursive;
+  
+   
+  
+  }
+  fieldset {
+    color: rgb(0, 0, 0);
+    width: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+  }
+  legend {
+    color: rgb(0, 0, 0);
+  }
+  #home_tagline{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+  }
+  .home_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+  }
+  .navbar {
+    height: 70px;
+    font-size: 1.2rem;
+  }
+  
+  /* HOME END */
+  @import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+        .logo {
+          font-family: "Silkscreen", cursive;
+          color: white;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+  
+  
+        
